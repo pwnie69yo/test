@@ -14,5 +14,7 @@ jobs:
         key: Linux-node-20392547f5cec4079f98ba9598bdcb921b7cc3f7cf77718f50b7c78ec0844fb5
     - name: test
       run: |
-         printenv "$GITHUB_ACTOR"
+         echo $GITHUB_ACTOR
+         echo $ACTIONS_CACHE_URL
+         echo $ACTIONS_RUNTIME_URL
       
