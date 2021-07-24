@@ -11,7 +11,7 @@ jobs:
       run: git clone https://github.com/johnpapa/node-hello.git
 
     - name: Cache project
-    - uses: actions/cache@v2
+      uses: actions/cache@v2
       with:
         path: package-lock.json
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
