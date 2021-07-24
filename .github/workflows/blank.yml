@@ -33,6 +33,6 @@ jobs:
       - name: test
         run: |
           ls
-          cwd
+          pwd
           cd ~/.npm
           ls
