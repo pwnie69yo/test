@@ -1,4 +1,4 @@
-name: Test
+name: Caching
 
 on: push
 
@@ -6,10 +6,11 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-    - run: curl https://artifactcache.actions.githubusercontent.com/JkiWAICOGKccZIzjB7hSQ4JEvqd2QjQOSrZ3BbO0tXZbopoAhK/_apis/artifactcache/cache?keys=Linux-node-20392547f5cec4079f98ba9598bdcb921b7cc3f7cf77718f50b7c78ec0844fb5&version=c242501c19ada3dcced7a83b074ccb8e79f816602d4125493924624b38591de2
-    - run: zstd --version
-     
-      
+    - name: Cache project
+      uses: actions/cache@v2
+      with:
+        path:  ~/.npm
+        key: Linux-node-20392547f5cec4079f98ba9598bdcb921b7cc3f7cf77718f50b7c78ec0844fb5
+    
 
         
-      
