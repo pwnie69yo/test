@@ -1,16 +1,18 @@
-name: Caching
+name: Test
 
 on: push
 
 jobs:
   job1:
     runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://example.com
     steps:
     - name: Cache project
-      uses: actions/cache@v2
-      with:
-        path:  ~/.npm
-        key: Linux-node-20392547f5cec4079f98ba9598bdcb921b7cc3f7cf77718f50b7c78ec0844fb5
+      uses: actions/checkout@v2
+    - run: ls -la
+    - run: cat README.md
    
         
       
