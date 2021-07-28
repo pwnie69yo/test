@@ -7,6 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: yo
-    - uses: actions/hello-world-javascript-action@main
+    - uses: pocccc7/hello-world-javascript-action@main
       with:
-        who-to-greet: 'Mona'
+        who-to-greet: 'Monaa'
