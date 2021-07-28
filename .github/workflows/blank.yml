@@ -1,6 +1,6 @@
 name: Test
 
-on: push
+on: workflow_dispatch
 
 jobs:
   job1:
@@ -9,7 +9,7 @@ jobs:
       name: production
       url: https://example.com
     steps:
-    - name: Cache project
+    - name: Testing
       uses: actions/checkout@v2
     - run: ls -la
     - run: cat README.md
