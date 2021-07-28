@@ -1,9 +1,12 @@
-name: Caching
+name: test
 
-on: pull_request
+on: push
 
 jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
     - run: yo
+    - uses: actions/hello-world-javascript-action@main
+      with:
+        who-to-greet: 'Mona'
