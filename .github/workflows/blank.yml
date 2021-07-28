@@ -1,9 +1,15 @@
-name: Caching
+name: Test
 
 on: pull_request
 
 jobs:
   job1:
     runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: http://example.com
     steps:
-    - run: yo
+    - name: Testing
+      uses: actions/checkout@v2
+    - run: ls -la
+    - run: cat README.md
